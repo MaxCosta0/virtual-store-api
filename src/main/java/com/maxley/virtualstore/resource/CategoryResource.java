@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.maxley.virtualstore.domain.model.Category;
-import com.maxley.virtualstore.domain.service.CategoryService;
+import com.maxley.virtualstore.domain.Category;
+import com.maxley.virtualstore.service.CategoryService;
 
 @RestController
 @RequestMapping("/categorias")

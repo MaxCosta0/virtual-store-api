@@ -7,10 +7,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.maxley.virtualstore.domain.model.Category;
-import com.maxley.virtualstore.domain.model.Product;
-import com.maxley.virtualstore.domain.repository.CategoryRepository;
-import com.maxley.virtualstore.domain.repository.ProductRepository;
+import com.maxley.virtualstore.domain.Category;
+import com.maxley.virtualstore.domain.Product;
+import com.maxley.virtualstore.repository.CategoryRepository;
+import com.maxley.virtualstore.repository.ProductRepository;
 
 @SpringBootApplication
 public class VirtualstoreApiApplication implements CommandLineRunner {

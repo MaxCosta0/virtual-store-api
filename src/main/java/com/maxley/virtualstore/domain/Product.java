@@ -1,4 +1,4 @@
-package com.maxley.virtualstore.domain.model;
+package com.maxley.virtualstore.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Product implements Serializable{
 
@@ -23,6 +25,7 @@ public class Product implements Serializable{
 	private String name;
 	private Double price;
 	
+	@JsonBackReference
 	@ManyToMany
 	@JoinTable(name = "Product_Category",
 			joinColumns = @JoinColumn(name = "product_id"),

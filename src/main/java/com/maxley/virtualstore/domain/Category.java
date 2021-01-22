@@ -1,4 +1,4 @@
-package com.maxley.virtualstore.domain.model;
+package com.maxley.virtualstore.domain;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 public class Category implements Serializable {
@@ -21,6 +23,7 @@ public class Category implements Serializable {
 	
 	private String name;
 	
+	@JsonManagedReference
 	@ManyToMany(mappedBy = "categories")
 	private List<Product> products = new ArrayList<>();
 	
